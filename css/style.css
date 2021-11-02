@@ -1,0 +1,269 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.wrapper{
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.headerWrapper{
+    display: flex;
+    background-color: black;
+    height: 140px;
+    width: 73.3vw;
+    margin: 1em auto 2em;
+    justify-content: space-between;
+    padding-top: 42px;
+    padding-left: 28px;
+}
+
+.headerWrapperAuth{
+    display: flex;
+    width: 800px;
+    justify-content: flex-end;
+}
+.headerWrapperSearchInp{
+    width: 22.7vw;
+    height: 34px;
+    margin-left: 2.1vw;
+    outline: none;
+}
+.headerWrapperSearchBtn{
+    height: 34px;
+    color: black;
+    background-color: #5959b0;
+    font-family: 'Roboto', sans-serif;
+}
+
+.headerWrapperAuthBtn{
+    height: 34px;
+    color: white;
+    background-color: black;
+    margin-right: 20px;
+    font-family: 'Roboto', sans-serif;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+    cursor: pointer;
+}
+.headerWrapperAuthBtn:hover{
+    color: #e55266;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+.headerWrapperRegBtn{
+    height: 34px;
+    color: white;
+    background-color: black;
+    margin-right: 28px;
+    font-family: 'Roboto', sans-serif;
+    cursor: pointer;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+.headerWrapperRegBtn:hover{
+    color: #e55266;
+    transition: all .3s linear;
+    -webkit-transition: all .3s linear;
+    -moz-transition: all .3s linear;
+}
+input{
+    padding: 0 5px;
+    font-size: 22px;
+}
+                                /* МОДАЛЬНОЕ ОКНО ВХОДА/АВТОРИЗАЦИИ */
+.PopupBgAuth{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.PopupBgAuth.activeAuth{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.PopupBodyAuth{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+.PopupBodyAuth.activeAuth{
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+.PopupContentAuth{
+    color: #cfd0d3;
+    max-width: 800px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.PopupBodyAuth input{
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+.PopupBodyAuth input:focus + .PopupContentAuth{
+    color:#2982ff;
+}
+.PopupBodyAuth input:focus{
+    border-bottom: 1px solid #2982ff;
+}
+.PopupBodyAuthBtn{
+    width: 200px;
+    height: 45px;
+    color: #fff;
+    background:#2982ff;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    margin-top: 30px;
+}
+.PopupBodyRegBtn{
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s all;
+    margin-top: 10px;
+}
+.PopupBodyAuth button:hover{
+    background: white;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+.PopupBodyRegBtn:hover{
+    color: #e55266;
+    transition: 0.5s all;
+}
+.PopupBodyHeader{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+                                /* МОДАЛЬНОЕ ОКНО РЕГИСТРАЦИИ */
+.PopupBodyHeaderReg{
+    text-transform: uppercase;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 14px;
+}
+.PopupBodyHeaderWel{
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 20px;
+}
+.PopupBgReg{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    opacity: 0;
+    pointer-events: none;
+    transition: 0.5s all;
+}
+.PopupBgReg.activeReg{
+    opacity: 1;
+    pointer-events: all;
+    transition: 0.5s all;
+}
+.PopupBodyReg{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: translate(-50%, -50%) scale(0);
+    background: #fff;
+    width: 500px;
+    padding: 25px;
+    transition: 0.5s all;
+}
+.PopupBodyReg.activeReg{
+    transform: translate(-50%, -50%) scale(1);
+    transition: 0.5s all;
+}
+.PopupContentReg{
+    color: #cfd0d3;
+    max-width: 800px;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.PopupBodyReg input{
+    height: 45px;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid #cfd0d3;
+}
+.PopupBodyReg input:focus + .PopupContentReg{
+    color:#2982ff;
+}
+.PopupBodyReg input:focus{
+    border-bottom: 1px solid #2982ff;
+}
+.PopupBodyBtnReg{
+    width: 260px;
+    height: 45px;
+    color: #fff;
+    background:#2982ff;
+    cursor: pointer;
+    font-size: 18px;
+    border: 2px solid #2982ff;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    margin-top: 30px;
+}
+.PopupBodyBtnReg:hover{
+    background: white;
+    color:#2982ff;
+    transition: 0.5s all;
+}
+.PopupBodyBtnAuth{
+    color: #000;
+    cursor: pointer;
+    font-size: 18px;
+    transition: 0.5s all;
+    margin-top: 10px;
+}
+.PopupBodyBtnAuth:hover{
+    color: #e55266;
+    transition: 0.5s all;
+}
+.PopupContentRegCheck{
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}
+.RegCheckbox__text{
+    display: flex;
+    align-items: center;
+}
