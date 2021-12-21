@@ -267,3 +267,24 @@ input{
     display: flex;
     align-items: center;
 }
+
+.predmain{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    justify-content: space-between;
+}
+.main{
+    width: 22vw;
+    border: 2px solid rgb(243, 168, 168);
+    margin: 3vw 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.textcard{
+    font-family: 'Roboto', sans-serif ;
+    font-size: 20px;
+}
